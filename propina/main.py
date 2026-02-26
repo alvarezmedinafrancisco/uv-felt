@@ -43,5 +43,30 @@ def main(page=ft.Page):
             alignment=ft.MainAxisAlignment.CENTER
         )
     )
+    
+    page.title = "Calculadora de propina"
+    
+    page.add(ft.Text(value="Hola, esta es una calculadora de propina", size=30))
+    
+    
+    page.add(ft.Text(value="Ingresa el monto de la cuenta", size=24 , color=ft.Colors.BLUE ,
+                    weight=ft.FontWeight.BOLD, 
+                    italic=True,
+                    text_align=ft.TextAlign.CENTER,
+                    max_lines=2,
+                    overflow=ft.TextOverflow.ELLIPSIS
+                    ))
+    
+    
+    page.add(ft.Image(src="https://cdn-icons-png.flaticon.com/512/1046/1046784.png", width=200, height=200,
+                    fit = "cover",
+                    border_radius=ft.border_radius.all(10),
+                    repeat=ft.ImageRepeat.NO_REPEAT,
+                    ))
+    
+    page.add(ft.Divider(height=10, thickness=2, color=ft.Colors.GREY_400))
+    page.add(ft.Row(
+        [ft.VerticalDivider(width=10, thickness=2, color=ft.Colors.GREY_400),
+        ]))
 
 ft.run(main)
